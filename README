@@ -1,0 +1,5 @@
+使用freeMaker实现代码生成器，
+目标：使用freeMaker生成后台Java entity，action，service层代码，页面生成ExtJs代码，实现增删查改功能。
+20160125:
+实现测试生成不同Javabean，
+参考：http://blog.csdn.net/xiaxiaorui2003/article/details/19081605
