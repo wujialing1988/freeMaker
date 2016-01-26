@@ -3,3 +3,69 @@
 20160125:
 实现测试生成不同Javabean，
 参考：http://blog.csdn.net/xiaxiaorui2003/article/details/19081605
+
+20160126:
+代码生成器模板构想：
+1）后台：
+	action：
+	类名：
+	XxxAction extends BaseAction()
+	
+	@AutoWrite
+	private IXxxService xxxService ;
+	
+	private Xxx xxx ;
+	
+	//get set 方法
+	
+	方法
+	/**
+	 *	获取Xxx模块列表
+	 *
+	 **/
+	getXxxList(){
+		Map param = getRequest();
+		ResponseVo vo = xxxService.getXxxList(param);
+		JsonUtils.outJson(vo);
+	}	 
+	
+	/**
+	 *	获取对象
+	 *
+	 **/
+	getXxx(){
+		String id = getParam();
+		ResponseVo vo = xxxService.getXxx(id);
+		JsonUtils.outJson(vo);
+	}
+	
+    /**
+	 *	添加Xxx
+	 *
+	 **/
+	addXxx(){
+		ResponseVo vo = xxxService.addXxx(xxx);
+		JsonUtils.outJson(vo);
+	}
+	
+	/**
+	 *	修改Xxx
+	 *
+	 **/
+	updateXxx(){
+		ResponseVo vo = xxxService.updateXxx(xxx);
+		JsonUtils.outJson(vo);
+	}
+	
+	/**
+	 * 删除Xxx
+	 *
+	 **/
+	deleteXxx(){
+		String ids = getParam();
+		ResponseVo vo = xxxService.deleteXxx(ids);
+		JsonUtils.outJson(vo);
+	}
+	
+	
+	
